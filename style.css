@@ -28,10 +28,12 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 8rem;
+    height: 100vh;
     width: 100%;
     padding: 2rem 9%;
-    background: transparent;
+    background-image: url(Image/Pixelark-Logo-01.jpg) ;
+    background-size: cover;
+    background-position: center;
 }
 
 .header {
@@ -80,7 +82,6 @@ header {
     width: 100%;
     align-items: center;
     margin-top: 40vh;
-    padding: 0 9%;
 }
 
 .header-text P {
