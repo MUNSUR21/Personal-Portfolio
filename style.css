@@ -25,7 +25,6 @@ body {
 }
 
 header {
-    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -95,4 +94,72 @@ header {
 
 .header-text h1 span {
     color: var(--main-color);
+}
+
+/* -----------------------About Section--------------- */
+
+#about {
+    padding: 80px 9%;
+}
+
+.About-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.About-Column-1 {
+    flex-basis: 35%;
+}
+
+.About-Column-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.About-Column-2 {
+    flex-basis: 60%;
+    color: var(--text-color);
+}
+
+.About-Column-2 h1 {
+    font-size: 2.65rem;
+    font-weight: 600;
+}
+
+.About-Column-2 p {
+    padding-top: 15px;
+    text-align: justify;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 40px 0 40px;
+}
+
+.tab-link {
+    margin: 0 6rem 0 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    bottom: -6px;
+    background: var(--main-color);
+    left: 0;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.tab-link:hover:after {
+    width: 100%;
+}
+
+.tab-link.active::after {
+    width: 50%;
 }
