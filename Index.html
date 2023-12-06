@@ -46,14 +46,57 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae similique adipisci eligendi. Incidunt quis, quas ad vel officia, nemo cumque labore libero praesentium sint deserunt, corrupti corporis beatae natus itaque! Exercitationem dolorem similique praesentium cumque, provident laboriosam iure. Dolorem perferendis aliquid ipsum sequi architecto esse a optio modi beatae? Facilis!</p>
 
                     <div class="tab-titles">
-                        <div class="tab-link active">Skills</div>
-                        <div class="tab-link">Expriences</div>
-                        <div class="tab-link">Education</div>
+                        <div class="tab-link active" onclick="Opentab('skills')">Skills</div>
+                        <div class="tab-link" onclick="Opentab('expriences')">Expriences</div>
+                        <div class="tab-link" onclick="Opentab('education')">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Adroid/ios Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="expriences">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
+                            <li><span>2019 - 2021</span><br>Team Lead at StarApp LLC.</li>
+                            <li><span>2017 - 2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                            <li><span>2016 - 2017</span><br>Internship at Ekart E-commerce.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>UI/UX Training at ET Institute</li>
+                            <li><span>2016</span><br>MBA from MIT Bangalore.</li>
+                            <li><span>2014</span><br>BBA from ISM Bangalore.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-link");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function Opentab(tabname){
+            for(tablink of tablinks){
+                  tablink.classList.remove("active");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active")
+            document.getElementById(tabname) .classList.add("active-tab")
+        }
+
+    </script>
+
 </body>
 
 </html>

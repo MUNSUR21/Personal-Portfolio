@@ -163,3 +163,25 @@ header {
 .tab-link.active::after {
     width: 50%;
 }
+
+.tab-contents ul {
+    margin-top: 60px;
+}
+
+.tab-contents ul li {
+    margin-top: 15px;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.tab-contents ul span {
+    font-size: .90rem;
+    color: var(--main-color);
+}
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
